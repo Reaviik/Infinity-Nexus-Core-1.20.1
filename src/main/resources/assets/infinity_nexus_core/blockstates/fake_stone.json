@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "infinity_nexus_core:block/fake_stone"
+    }
+  }
+}

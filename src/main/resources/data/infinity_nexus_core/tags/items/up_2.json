@@ -1,0 +1,12 @@
+{
+  "values": [
+    "infinity_nexus_core:basic_component",
+    "infinity_nexus_core:reinforced_component",
+    "infinity_nexus_core:logic_component",
+    "infinity_nexus_core:advanced_component",
+    "infinity_nexus_core:refined_component",
+    "infinity_nexus_core:integral_component",
+    "infinity_nexus_core:infinity_component",
+    "infinity_nexus_core:ancestral_component"
+  ]
+}

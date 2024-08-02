@@ -1,0 +1,34 @@
+{
+  "itemGroup.infinity_nexus_core": "§x§9§0§0§0§9§dInfinity Nexus Core",
+  "tooltip.infinity_nexus_core.pressShift":"§bPresione §eShift §bpara ver mais",
+
+  "item.infinity_nexus_core.linking_tool":"Ferramenta de ligação",
+  "tooltip.infinity_nexus_core.linking_tool": "§bRenomeie este item usando o exemplo abaixo com as coordenadas de destino dos itens (raio de ação: 100 blocos).\n\n§cw=0,§ex=30,y=-51,z=-77,face=up\n\n§b Lados permitidos:\nnorth, south, east, west, up, down.",
+
+  "item.infinity_nexus_core.speed_upgrade": "Ampliação de Velocidade",
+  "item.infinity_nexus_core.strength_upgrade": "Ampliação de Força",
+  "item.infinity_nexus_core.muffler_upgrade": "Ampliação de Cancelamento de Ruidos",
+  "item.infinity_nexus_core.strength_description": "Esse upgrade diminui o custo de de energia de sua maquina.",
+  "item.infinity_nexus_core.speed_description": "Esse upgrade aumenta a velocidade de sua maquina.",
+
+  "item.infinity_nexus_core.redstone_component": "Componente de Redstone",
+  "item.infinity_nexus_core.basic_component": "Componente Básico",
+  "item.infinity_nexus_core.reinforced_component": "Componente Reforçado",
+  "item.infinity_nexus_core.logic_component": "Componente Lógico",
+  "item.infinity_nexus_core.advanced_component": "Componente Avançado",
+  "item.infinity_nexus_core.refined_component": "Componente Refinado",
+  "item.infinity_nexus_core.integral_component": "Componente Integral",
+  "item.infinity_nexus_core.infinity_component": "Componente de Infinity",
+  "item.infinity_nexus_core.ancestral_component": "Componente Ancestral",
+
+  "tooltip.infinity_nexus_core.component_install": "Clique com o botão direito em uma máquina para instalar este componente de nível.",
+  "tooltip.infinity_nexus_core.upgrade_install": "Clique com o botão direito em uma máquina para instalar esta amplição.",
+
+  "block.infinity_nexus_core.fake_dirt": "Terra",
+  "block.infinity_nexus_core.fake_grass_block": "Bloco de Grama",
+  "block.infinity_nexus_core.fake_stone": "Pedra",
+
+  "tooltip.infinity_nexus_core.component": "Slot de Componente",
+  "tooltip.infinity_nexus_core.linking": "Slot de Ferramenta de Ligação",
+  "tooltip.infinity_nexus_core.upgrades": "Slots de Ampliacão"
+}

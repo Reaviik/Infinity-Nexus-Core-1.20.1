@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "infinity_nexus_core:block/fake_grass_block"
+  }
+}
