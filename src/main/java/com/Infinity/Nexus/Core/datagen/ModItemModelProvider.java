@@ -33,6 +33,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SPEED_UPGRADE);
         simpleItem(ModItems.STRENGTH_UPGRADE);
         simpleItem(ModItems.MUFFLER_UPGRADE);
+        simpleItem(ModItems.PUSHER_UPGRADE);
     }
     private ItemModelBuilder simpleItem(RegistryObject<Item> item){
         return withExistingParent(item.getId().getPath(),

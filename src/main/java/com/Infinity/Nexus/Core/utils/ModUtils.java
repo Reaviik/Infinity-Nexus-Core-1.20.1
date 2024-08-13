@@ -3,10 +3,13 @@ package com.Infinity.Nexus.Core.utils;
 import com.Infinity.Nexus.Core.items.custom.ComponentItem;
 import com.Infinity.Nexus.Core.items.ModItems;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
@@ -46,6 +49,8 @@ public class ModUtils {
         for (int i : upgradeSlots) {
             if (itemHandler.getStackInSlot(i).getItem() == ModItems.SPEED_UPGRADE.get()) {
                 speed += itemHandler.getStackInSlot(i).getCount();
+            }else if (itemHandler.getStackInSlot(i).getItem() == ModItems.PUSHER_UPGRADE.get()) {
+                speed += 4;
             }
         }
         return speed;
@@ -68,10 +73,19 @@ public class ModUtils {
         }
         return muffler;
     }
+    public static boolean getPusher(ItemStackHandler itemHandler, int[] upgradeSlots) {
+        for (int i : upgradeSlots) {
+            if (itemHandler.getStackInSlot(i).getItem() == ModItems.PUSHER_UPGRADE.get()) {
+                return true;
+            }
+        }
+        return false;
+    }
     public static boolean isUpgrade(ItemStack stack) {
         return stack.getItem() == ModItems.STRENGTH_UPGRADE.get()
                 || stack.getItem() == ModItems.SPEED_UPGRADE.get()
-                || stack.getItem() == ModItems.MUFFLER_UPGRADE.get();
+                || stack.getItem() == ModItems.MUFFLER_UPGRADE.get()
+                || stack.getItem() == ModItems.PUSHER_UPGRADE.get();
 
     }
     public static boolean canPlaceItemInContainer(ItemStack itemStack, int slotIndex, IItemHandler iItemHandler) {
@@ -132,5 +146,40 @@ public class ModUtils {
     }
     public static boolean canInsert(IItemHandler itemHandler, int slots, ItemStack stack) {
         return itemHandler.getStackInSlot(slots).isEmpty() && !isUpgrade(stack) && !isComponent(stack);
+    }
+
+    public static void ejectItemsWhePusher(BlockPos pos,int[] componentSlot, int[] outputSlot, ItemStackHandler inventory, Level level) {
+        if(getPusher(inventory, componentSlot)){
+            try {
+                BlockEntity blockEntity = level.getBlockEntity(pos);
+                if (blockEntity != null) {
+                    blockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER, Direction.DOWN).ifPresent(iItemHandler -> {
+                        //Para cada slot de Saida
+                        for (int i : outputSlot) {
+                            ItemStack outputStack = inventory.getStackInSlot(i);
+                            if (!outputStack.isEmpty()) {
+                                //Para cada slot de entrada
+                                for (int j = 0; j < iItemHandler.getSlots(); j++) {
+                                    //Se o slot de entrada estiver vazio ou puder inserir o item
+                                    if (iItemHandler.getStackInSlot(j).isEmpty() || (iItemHandler.getStackInSlot(j).getItem() == outputStack.getItem())) {
+                                        if((iItemHandler.getStackInSlot(j).getCount() + outputStack.getCount()) < iItemHandler.getSlotLimit(j)) {
+                                            iItemHandler.insertItem(j, outputStack, false);
+                                            inventory.extractItem(i, outputStack.getCount(), false);
+                                            break;
+                                        }else if((iItemHandler.getStackInSlot(j).getCount() + 1) <= iItemHandler.getSlotLimit(j)){
+                                            iItemHandler.insertItem(j, new ItemStack(outputStack.getItem(), 1), false);
+                                            inventory.extractItem(i, 1, false);
+                                            ejectItemsWhePusher(pos, componentSlot, outputSlot, inventory, level);
+                                            break;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+            } catch (Exception ignored) {
+            }
+        }
     }
 }

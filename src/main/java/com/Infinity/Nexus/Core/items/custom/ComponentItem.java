@@ -11,8 +11,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import org.jetbrains.annotations.Nullable;
 
+import javax.annotation.Nullable;
 import java.util.List;
 
 public class ComponentItem extends Item {
@@ -49,16 +49,14 @@ public class ComponentItem extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
         if(!pLevel.isClientSide()){
-            if(Screen.hasShiftDown()){
-                ItemStack mainHand = pPlayer.getMainHandItem();
-                ItemStack offHand = pPlayer.getOffhandItem();
+            ItemStack mainHand = pPlayer.getMainHandItem();
+            ItemStack offHand = pPlayer.getOffhandItem();
 
-                if(mainHand.getItem().equals(ModItems.ANCESTRAL_COMPONENT.get()) && !mainHand.getOrCreateTag().getBoolean("isInfinite")){
-                    if(offHand.getItem().equals(ModItems.INFINITY_COMPONENT.get())){
-                        pPlayer.getMainHandItem().setDamageValue(0);
-                        mainHand.getOrCreateTag().putBoolean("isInfinite", true);
-                        offHand.shrink(1);
-                    }
+            if(mainHand.getItem().equals(ModItems.ANCESTRAL_COMPONENT.get()) && !mainHand.getOrCreateTag().getBoolean("isInfinite")){
+                if(offHand.getItem().equals(ModItems.INFINITY_COMPONENT.get())){
+                    pPlayer.getMainHandItem().setDamageValue(0);
+                    mainHand.getOrCreateTag().putBoolean("isInfinite", true);
+                    offHand.shrink(1);
                 }
             }
         }

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "infinity_nexus_mod:steel_ingot"
+    },
+    "B": {
+      "item": "infinity_nexus_mod:speed_upgrade"
+    },
+    "C": {
+      "item": "minecraft:hopper"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "BCB",
+    "ABA"
+  ],
+  "result": {
+    "item": "infinity_nexus_mod:pusher_upgrade"
+  },
+  "show_notification": true
+}

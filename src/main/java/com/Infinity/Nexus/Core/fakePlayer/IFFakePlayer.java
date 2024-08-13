@@ -26,15 +26,19 @@ package com.Infinity.Nexus.Core.fakePlayer;
 import com.mojang.authlib.GameProfile;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.common.ForgeHooks;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.util.FakePlayer;
 
 import java.util.UUID;
@@ -43,6 +47,7 @@ import java.util.logging.Level;
 public class IFFakePlayer extends FakePlayer {
 
     private static final UUID uuid = UUID.fromString("376b0492-4386-40ec-8907-2124f2d65823");
+    private ItemStack heldItem = new ItemStack(Items.NETHERITE_SWORD);
 
     private static final GameProfile PROFILE;
 
@@ -52,9 +57,22 @@ public class IFFakePlayer extends FakePlayer {
 
     @Override
     public ItemStack getItemInHand(InteractionHand pHand) {
-        return new ItemStack(Items.NETHERITE_SWORD);
+        return new ItemStack(heldItem.getItem());
     }
 
+    @Override
+    public void setItemInHand(InteractionHand pHand, ItemStack pStack) {
+        heldItem = pStack;
+    }
+
+    public static UUID getUuid() {
+        return uuid;
+    }
+
+    @Override
+    public EntityType<?> getType() {
+        return EntityType.PLAYER;
+    }
 
     public boolean onPlaceItemIntoWorld(Level world, BlockPos pos, ItemStack stack, InteractionHand hand, Direction direction) {
         this.setItemInHand(hand, stack);

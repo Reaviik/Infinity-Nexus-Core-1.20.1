@@ -3,15 +3,18 @@
   "tooltip.infinity_nexus_core.pressShift":"§bPress §eShift §bto see more",
 
   "item.infinity_nexus_core.linking_tool":"Linking Tool",
-  "tooltip.infinity_nexus_core.linking_tool": "§bRename this item using the example below with the destination coordinates of the items (action radius: 100 blocks).\n\n§cw=0,§ex=30,y=80,z=-77,face=up\n §bAllowed sides:\n\nnorth, south, east, west, up, down.",
+  "tooltip.infinity_nexus_core.linking_tool": "§aShift+Click on destination inventory to copy coordinates.\n§bRename this item using the example below with the destination coordinates of the items (action radius: 100 blocks).\n\n§cw=0,§ex=30,y=80,z=-77,face=up\n §bAllowed sides:\n\nnorth, south, east, west, up, down.",
 
   "item.infinity_nexus_core.speed_upgrade": "Speed Upgrade",
   "item.infinity_nexus_core.strength_upgrade": "Strength Upgrade",
   "item.infinity_nexus_core.muffler_upgrade": "Muffler Upgrade",
+  "item.infinity_nexus_core.pusher_upgrade": "Pusher Upgrade",
   "item.infinity_nexus_core.strength_description": "This upgrade decreases the energy cost of your machine.",
   "item.infinity_nexus_core.speed_description": "This upgrade increases the speed of your machine.",
+  "item.infinity_nexus_core.muffler_description": "This upgrade decreases the sound of your machine.",
+  "item.infinity_nexus_core.pusher_description": "This upgrade eject items from your machine up.",
   "tooltip.infinity_nexus_core.component_install": "Right-click on a machine to install this level component.",
-  "tooltip.infinity_nexus_core.upgrade_install": "Right-click on a machine to install this level upgrade.",
+  "tooltip.infinity_nexus_core.upgrade_install": "Right-click on a machine to install this upgrade.",
 
   "item.infinity_nexus_core.redstone_component": "Redstone Component",
   "item.infinity_nexus_core.basic_component": "Basic Component",
@@ -29,6 +32,7 @@
 
   "tooltip.infinity_nexus_core.component": "Component Slot",
   "tooltip.infinity_nexus_core.linking": "Linking Tool Slot",
-  "tooltip.infinity_nexus_core.upgrades": "Upgrade Slots"
-
+  "tooltip.infinity_nexus_core.upgrades": "Upgrade Slots",
+  "infinity_nexus_core.tooltip.liquid.amount.with.capacity": "%s / %s mb",
+  "infinity_nexus_core.tooltip.liquid.amount": "%s mb"
 }

@@ -24,6 +24,10 @@ public class UpgradeItem extends Item {
                 components.add(Component.translatable("item.infinity_nexus_core.speed_description"));
             } else if(stack.getItem() == ModItems.STRENGTH_UPGRADE.get()) {
                 components.add(Component.translatable("item.infinity_nexus_core.strength_description"));
+            }else if(stack.getItem() == ModItems.MUFFLER_UPGRADE.get()) {
+                components.add(Component.translatable("item.infinity_nexus_core.muffler_description"));
+            } else if(stack.getItem() == ModItems.PUSHER_UPGRADE.get()) {
+                components.add(Component.translatable("item.infinity_nexus_core.pusher_description"));
             }
             components.add(Component.translatable("tooltip.infinity_nexus_core.upgrade_install"));
         } else {

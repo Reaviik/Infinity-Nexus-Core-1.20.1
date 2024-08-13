@@ -19,6 +19,7 @@ public class ModItems {
     public static final RegistryObject<Item> SPEED_UPGRADE = ITEMS.register("speed_upgrade", () -> new UpgradeItem(new Item.Properties().stacksTo(4).fireResistant().rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> STRENGTH_UPGRADE = ITEMS.register("strength_upgrade", () -> new UpgradeItem(new Item.Properties().stacksTo(4).fireResistant().rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> MUFFLER_UPGRADE = ITEMS.register("muffler_upgrade", () -> new UpgradeItem(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.UNCOMMON)));
+    public static final RegistryObject<Item> PUSHER_UPGRADE = ITEMS.register("pusher_upgrade", () -> new UpgradeItem(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.UNCOMMON)));
     public static final RegistryObject<Item> LINKING_TOOL = ITEMS.register("linking_tool", () -> new LinkingTool(new Item.Properties().stacksTo(1).durability(-1)));
 
     public static final RegistryObject<Item> REDSTONE_COMPONENT = ITEMS.register("redstone_component", () -> new ComponentItem(new Item.Properties().stacksTo(1).durability(1000).rarity(Rarity.COMMON), "§2Base Durability:§e 1000"));

@@ -34,6 +34,7 @@ public class ModTab {
                         pOutput.accept(new ItemStack(ModItems.SPEED_UPGRADE.get()));
                         pOutput.accept(new ItemStack(ModItems.STRENGTH_UPGRADE.get()));
                         pOutput.accept(new ItemStack(ModItems.MUFFLER_UPGRADE.get()));
+                        pOutput.accept(new ItemStack(ModItems.PUSHER_UPGRADE.get()));
 
                         pOutput.accept(new ItemStack(ModItems.LINKING_TOOL.get()));
                         //-------------------------//-------------------------//

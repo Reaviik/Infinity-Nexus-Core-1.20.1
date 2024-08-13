@@ -17,7 +17,7 @@ public class RenderScreenTooltips {
     public static void renderUpgradeSlotTooltipAndItems(Font font, GuiGraphics pGuiGraphics, int pMouseX, int pMouseY, int x, int y) {
         pGuiGraphics.renderTooltip(font, List.of(Component.translatable("tooltip.infinity_nexus_core.upgrades")), Optional.empty(), pMouseX - x, pMouseY - y);
         int upgradePos = 7;
-        List <ItemStack> upgradeList = List.of(new ItemStack(ModItems.SPEED_UPGRADE.get(), 1), new ItemStack(ModItems.STRENGTH_UPGRADE.get(), 1));
+        List <ItemStack> upgradeList = List.of(new ItemStack(ModItems.SPEED_UPGRADE.get(), 1), new ItemStack(ModItems.STRENGTH_UPGRADE.get(), 1), new ItemStack(ModItems.MUFFLER_UPGRADE.get(), 1), new ItemStack(ModItems.PUSHER_UPGRADE.get(), 1));
         for (ItemStack itemStack : upgradeList) {
             pGuiGraphics.renderFakeItem(itemStack, (pMouseX - x) + upgradePos, pMouseY - y);
             upgradePos += 16;
@@ -44,7 +44,7 @@ public class RenderScreenTooltips {
     public static void renderLinkToolSlotTooltipAndItem(Font font, GuiGraphics pGuiGraphics, int pMouseX, int pMouseY, int x, int y) {
         pGuiGraphics.renderTooltip(font, List.of(Component.translatable("tooltip.infinity_nexus_core.linking")), Optional.empty(), pMouseX - x, pMouseY - y);
         int upgradePos = 7;
-        List <ItemStack> upgradeList = List.of(new ItemStack(ModItems.SPEED_UPGRADE.get(), 1), new ItemStack(ModItems.STRENGTH_UPGRADE.get(), 1));
+        List <ItemStack> upgradeList = List.of(new ItemStack(ModItems.SPEED_UPGRADE.get(), 1), new ItemStack(ModItems.STRENGTH_UPGRADE.get(), 1), new ItemStack(ModItems.MUFFLER_UPGRADE.get(), 1), new ItemStack(ModItems.PUSHER_UPGRADE.get(), 1));
         for (ItemStack itemStack : upgradeList) {
             pGuiGraphics.renderFakeItem(itemStack, (pMouseX - x) + upgradePos, pMouseY - y);
             upgradePos += 16;

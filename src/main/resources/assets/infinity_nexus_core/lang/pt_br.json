@@ -3,13 +3,16 @@
   "tooltip.infinity_nexus_core.pressShift":"§bPresione §eShift §bpara ver mais",
 
   "item.infinity_nexus_core.linking_tool":"Ferramenta de ligação",
-  "tooltip.infinity_nexus_core.linking_tool": "§bRenomeie este item usando o exemplo abaixo com as coordenadas de destino dos itens (raio de ação: 100 blocos).\n\n§cw=0,§ex=30,y=-51,z=-77,face=up\n\n§b Lados permitidos:\nnorth, south, east, west, up, down.",
+  "tooltip.infinity_nexus_core.linking_tool": "§aShift + Clique com o botão direito no inventario de destino para obter as coordenadas.\n§bRenomeie este item usando o exemplo abaixo com as coordenadas de destino dos itens (raio de ação: 100 blocos).\n\n§cw=0,§ex=30,y=-51,z=-77,face=up\n\n§b Lados permitidos:\nnorth, south, east, west, up, down.",
 
   "item.infinity_nexus_core.speed_upgrade": "Ampliação de Velocidade",
   "item.infinity_nexus_core.strength_upgrade": "Ampliação de Força",
   "item.infinity_nexus_core.muffler_upgrade": "Ampliação de Cancelamento de Ruidos",
+  "item.infinity_nexus_core.pusher_upgrade": "Ampliação de Ejetor",
   "item.infinity_nexus_core.strength_description": "Esse upgrade diminui o custo de de energia de sua maquina.",
   "item.infinity_nexus_core.speed_description": "Esse upgrade aumenta a velocidade de sua maquina.",
+  "item.infinity_nexus_core.muffler_description": "Esse upgrade reduz o ruído de sua maquina.",
+  "item.infinity_nexus_core.pusher_description": "Esse upgrade faz sua máquina ejetar os itens para cima.",
 
   "item.infinity_nexus_core.redstone_component": "Componente de Redstone",
   "item.infinity_nexus_core.basic_component": "Componente Básico",
@@ -30,5 +33,8 @@
 
   "tooltip.infinity_nexus_core.component": "Slot de Componente",
   "tooltip.infinity_nexus_core.linking": "Slot de Ferramenta de Ligação",
-  "tooltip.infinity_nexus_core.upgrades": "Slots de Ampliacão"
+  "tooltip.infinity_nexus_core.upgrades": "Slots de Ampliacão",
+
+  "infinity_nexus_core.tooltip.liquid.amount.with.capacity": "%s / %s mb",
+  "infinity_nexus_core.tooltip.liquid.amount": "%s mb"
 }
