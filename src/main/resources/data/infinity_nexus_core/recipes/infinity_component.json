@@ -9,7 +9,7 @@
       "item": "infinity_nexus_mod:infinity_wire"
     },
     "C": {
-      "item": "infinity_nexus_mod:integral_component"
+      "item": "infinity_nexus_core:integral_component"
     }
   },
   "pattern": [
@@ -18,7 +18,13 @@
     "ABA"
   ],
   "result": {
-    "item": "infinity_nexus_mod:infinity_component"
+    "item": "infinity_nexus_core:infinity_component"
   },
-  "show_notification": true
+  "show_notification": true,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "infinity_nexus_mod"
+    }
+  ]
 }

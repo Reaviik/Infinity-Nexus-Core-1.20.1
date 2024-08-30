@@ -18,7 +18,13 @@
     "AAA"
   ],
   "result": {
-    "item": "infinity_nexus_mod:strength_upgrade"
+    "item": "infinity_nexus_core:strength_upgrade"
   },
-  "show_notification": true
+  "show_notification": true,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "infinity_nexus_mod"
+    }
+  ]
 }

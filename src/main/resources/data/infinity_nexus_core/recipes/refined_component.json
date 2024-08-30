@@ -9,7 +9,7 @@
       "item": "infinity_nexus_mod:brass_wire"
     },
     "C": {
-      "item": "infinity_nexus_mod:advanced_component"
+      "item": "infinity_nexus_core:advanced_component"
     }
   },
   "pattern": [
@@ -18,7 +18,13 @@
     "ABA"
   ],
   "result": {
-    "item": "infinity_nexus_mod:refined_component"
+    "item": "infinity_nexus_core:refined_component"
   },
-  "show_notification": true
+  "show_notification": true,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "infinity_nexus_mod"
+    }
+  ]
 }

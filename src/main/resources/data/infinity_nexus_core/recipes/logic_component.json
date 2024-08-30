@@ -9,7 +9,7 @@
       "item": "infinity_nexus_mod:steel_wire"
     },
     "C": {
-      "item": "infinity_nexus_mod:reinforced_component"
+      "item": "infinity_nexus_core:reinforced_component"
     }
   },
   "pattern": [
@@ -18,7 +18,13 @@
     "ABA"
   ],
   "result": {
-    "item": "infinity_nexus_mod:logic_component"
+    "item": "infinity_nexus_core:logic_component"
   },
-  "show_notification": true
+  "show_notification": true,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "infinity_nexus_mod"
+    }
+  ]
 }

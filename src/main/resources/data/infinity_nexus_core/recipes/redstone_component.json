@@ -21,7 +21,7 @@
     "ABA"
   ],
   "result": {
-    "item": "infinity_nexus_mod:redstone_component"
+    "item": "infinity_nexus_core:redstone_component"
   },
   "show_notification": true
 }

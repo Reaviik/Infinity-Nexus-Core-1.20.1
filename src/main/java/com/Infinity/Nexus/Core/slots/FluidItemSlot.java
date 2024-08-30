@@ -20,7 +20,7 @@ public class FluidItemSlot extends SlotItemHandler {
      */
     @Override
     public boolean mayPlace(@NotNull ItemStack stack) {
-        return !(ModUtils.isComponent(stack) || ModUtils.isUpgrade(stack)) || stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent();
+        return stack.getCapability(ForgeCapabilities.FLUID_HANDLER_ITEM).isPresent();
     }
 
     @Override

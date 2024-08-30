@@ -18,7 +18,7 @@
     "ABA"
   ],
   "result": {
-    "item": "infinity_nexus_mod:pusher_upgrade"
+    "item": "infinity_nexus_core:pusher_upgrade"
   },
   "show_notification": true
 }

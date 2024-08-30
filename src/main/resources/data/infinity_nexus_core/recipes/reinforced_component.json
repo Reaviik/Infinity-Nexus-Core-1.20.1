@@ -9,7 +9,7 @@
       "item": "infinity_nexus_mod:iron_wire"
     },
     "C": {
-      "item": "infinity_nexus_mod:basic_component"
+      "item": "infinity_nexus_core:basic_component"
     }
   },
   "pattern": [
@@ -18,7 +18,13 @@
     "ABA"
   ],
   "result": {
-    "item": "infinity_nexus_mod:reinforced_component"
+    "item": "infinity_nexus_core:reinforced_component"
   },
-  "show_notification": true
+  "show_notification": true,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "infinity_nexus_mod"
+    }
+  ]
 }
