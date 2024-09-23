@@ -19,9 +19,9 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, InfinityNexusCore.MOD_ID);
 
-    public static final RegistryObject<Block> FAKE_STONE = registerBlock("fake_stone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0f, 6.0f).noLootTable().sound(SoundType.STONE).mapColor(MapColor.STONE)));
-    public static final RegistryObject<Block> FAKE_GRASS_BLOCK = registerBlock("fake_grass_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).strength(2.0f, 6.0f).noLootTable().sound(SoundType.ROOTED_DIRT).mapColor(MapColor.GRASS)));
-    public static final RegistryObject<Block> FAKE_DIRT = registerBlock("fake_dirt", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).strength(2.0f, 6.0f).noLootTable().sound(SoundType.ROOTED_DIRT).mapColor(MapColor.DIRT)));
+    public static final RegistryObject<Block> FAKE_STONE = registerBlock("fake_stone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(2.0f, 6.0f).sound(SoundType.STONE).mapColor(MapColor.STONE)));
+    public static final RegistryObject<Block> FAKE_GRASS_BLOCK = registerBlock("fake_grass_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).strength(2.0f, 6.0f).sound(SoundType.ROOTED_DIRT).mapColor(MapColor.GRASS)));
+    public static final RegistryObject<Block> FAKE_DIRT = registerBlock("fake_dirt", () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).strength(2.0f, 6.0f).sound(SoundType.ROOTED_DIRT).mapColor(MapColor.DIRT)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
