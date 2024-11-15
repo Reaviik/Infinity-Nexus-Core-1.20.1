@@ -123,7 +123,7 @@ public class ModUtils {
     public static void useComponent(ItemStack component, Level level, BlockPos pos) {
 
         if (component.getItem() == ModItems.ANCESTRAL_COMPONENT.get()) {
-            int uses = component.getOrCreateTag().contains("Uses") ? component.getOrCreateTag().getInt("Uses") : 10;
+            int uses = component.getOrCreateTag().contains("Uses") ? component.getOrCreateTag().getInt("Uses") : 1;
             if (uses <= 1 && !component.getOrCreateTag().getBoolean("isInfinite")) {
                 component.shrink(1);
                 level.playSound(null, pos, SoundEvents.LAVA_EXTINGUISH, SoundSource.BLOCKS, 1.0f, 1.0f);

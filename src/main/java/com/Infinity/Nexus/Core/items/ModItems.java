@@ -30,7 +30,7 @@ public class ModItems {
     public static final RegistryObject<Item> REFINED_COMPONENT = ITEMS.register("refined_component", () -> new ComponentItem(new Item.Properties().stacksTo(1).durability(32000).rarity(Rarity.RARE), "§2Base Durability:§e 32000"));
     public static final RegistryObject<Item> INTEGRAL_COMPONENT = ITEMS.register("integral_component", () -> new ComponentItem(new Item.Properties().stacksTo(1).durability(64000).rarity(Rarity.EPIC), "§2Base Durability:§e 64000"));
     public static final RegistryObject<Item> INFINITY_COMPONENT = ITEMS.register("infinity_component", () -> new ComponentItem(new Item.Properties().stacksTo(1).durability(-1).rarity(Rarity.EPIC), "§2Base Durability:§e Infinity"));
-    public static final RegistryObject<Item> ANCESTRAL_COMPONENT = ITEMS.register("ancestral_component", () -> new ComponentItem(new Item.Properties().stacksTo(1).durability(10).rarity(Rarity.EPIC), ""));
+    public static final RegistryObject<Item> ANCESTRAL_COMPONENT = ITEMS.register("ancestral_component", () -> new ComponentItem(new Item.Properties().stacksTo(1).durability(1).rarity(Rarity.EPIC), ""));
 
 
     public static void register(IEventBus eventBus) {
