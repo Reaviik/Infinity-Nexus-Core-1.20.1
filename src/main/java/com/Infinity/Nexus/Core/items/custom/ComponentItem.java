@@ -29,7 +29,7 @@ public class ComponentItem extends Item {
             if (pStack.getItem() == ModItems.ANCESTRAL_COMPONENT.get()) {
                 components.add(Component.literal("§2Uses:" + (pStack.getOrCreateTag()
                         .contains("isInfinite") ? " §5∞ " : " ") + "§e" + (pStack.getOrCreateTag().contains("Uses") ? pStack.getOrCreateTag()
-                        .getInt("Uses") : 10)));
+                        .getInt("Uses") : 1)));
             } else {
                 components.add(Component.literal(durability));
             }
