@@ -41,11 +41,12 @@ public class LinkingTool extends Item {
             int x = (int) context.getClickedPos().getX();
             int y = (int) context.getClickedPos().getY();
             int z = (int) context.getClickedPos().getZ();
-            MutableComponent message = Component.literal("§b[§aClick to Copy Coordinates§b]");
+            MutableComponent message = Component.literal("§b[§aCoordinates§b]: "+ "w=0,x=" + x + ",y=" + y + ",z=" + z);
             Style style = Style.EMPTY.withClickEvent(new ClickEvent(ClickEvent.Action.COPY_TO_CLIPBOARD, Component.literal("w=0,x=" + x + ",y=" + y + ",z=" + z).getString()));
             message.withStyle(style);
             player.getMainHandItem().setHoverName(Component.literal("w=0,x=" + x + ",y=" + y + ",z=" + z));
             player.sendSystemMessage(message);
+            return InteractionResult.FAIL;
         }
         return super.onItemUseFirst(stack, context);
     }
