@@ -12,7 +12,7 @@
   "item.infinity_nexus_core.strength_description": "This upgrade decreases the energy cost of your machine.",
   "item.infinity_nexus_core.speed_description": "This upgrade increases the speed of your machine.",
   "item.infinity_nexus_core.muffler_description": "This upgrade decreases the sound of your machine.",
-  "item.infinity_nexus_core.pusher_description": "This upgrade eject items from your machine up.",
+  "item.infinity_nexus_core.pusher_description": "This upgrade eject items from your machine",
   "tooltip.infinity_nexus_core.component_install": "Right-click on a machine to install this level component.",
   "tooltip.infinity_nexus_core.upgrade_install": "Right-click on a machine to install this upgrade.",
 

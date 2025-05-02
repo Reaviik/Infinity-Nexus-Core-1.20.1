@@ -44,6 +44,18 @@ public class ModUtils {
         }
         return 0;
     }
+
+    public static Direction getLinkedSide(String side) {
+        return switch (side) {
+            case "up" -> Direction.UP;
+            case "down" -> Direction.DOWN;
+            case "north" -> Direction.NORTH;
+            case "south" -> Direction.SOUTH;
+            case "west" -> Direction.WEST;
+            case "east" -> Direction.EAST;
+            default -> Direction.UP;
+        };
+    }
     public static int getSpeed(ItemStackHandler itemHandler, int[] upgradeSlots) {
         int speed = 0;
         for (int i : upgradeSlots) {
